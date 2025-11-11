@@ -1,0 +1,99 @@
+:root {
+  --bg: #eedff9;
+  --calc-bg: #e6d3f5;
+  --line: #b9a0e6;
+  --text-main: #7e65c9;
+  --btn-bg: #f2eafb;
+  --btn-accent-line: #a48ae1;
+  --btn-accent: #b9a5ec;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-main);
+}
+
+.calculator {
+  padding: 20px;
+  width: 300px;
+  background: var(--calc-bg);
+  border: 4px solid var(--line);
+  border-radius: 40px;
+  margin: 20px auto;
+  box-shadow: 5px 5px 5px rgba(123, 78, 213, 0.15);
+}
+
+div.display {
+  background-color: var(--btn-bg);
+  border: 3px solid var(--line);
+  height: 80px;
+  margin: 20px 0;
+  border-radius: 20px;
+  text-align: right;
+  font-size: 32px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.buttons {
+  display: grid;
+  gap: 7px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+div.cat-logo {
+  width: 70px;
+  height: 70px;
+  background: center / 100% no-repeat url("image/cat.png");
+  background-color: var(--btn-bg);
+  border: 4px solid var(--line);
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.clear {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.empty {
+  visibility: hidden;
+  grid-column-end: 5;
+}
+
+.btn {
+  color: var(--text-main);
+  font-family: Nunito Sans;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 4px solid var(--line);
+  cursor: pointer;
+  background: var(--btn-bg);
+  box-shadow: 3px 3px 1px rgba(123, 78, 213, 0.15);
+}
+
+.btn.operator {
+  background-color: var(--btn-accent);
+  border-color: var(--btn-accent-line);
+  color: var(--btn-bg);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+button:hover {
+  transform: translateY(1px);
+}
+
+button:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
